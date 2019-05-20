@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="267.0" prefWidth="393.0" styleClass="anchor-pane" stylesheets="@../Css/test.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="component.Controller.add.addCel">
+   <children>
+      <Label layoutX="131.0" layoutY="6.0" text="Wybierz miesiąc">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font></Label>
+      <ChoiceBox fx:id="choiceMiesiac" layoutX="103.0" layoutY="27.0" prefHeight="32.0" prefWidth="156.0" />
+      <Label layoutX="35.0" layoutY="66.0" text="Wybierz pracownika">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font></Label>
+      <ChoiceBox fx:id="choicePracownik" layoutX="27.0" layoutY="87.0" prefHeight="32.0" prefWidth="156.0" />
+      <Label layoutX="213.0" layoutY="66.0" text="Wybierz produkt">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font></Label>
+      <ChoiceBox fx:id="choiceProdukt" layoutX="205.0" layoutY="87.0" prefHeight="32.0" prefWidth="156.0" />
+      <Label layoutX="50.0" layoutY="124.0" text="Wartość celu">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font></Label>
+      <TextField fx:id="kwotaField" layoutX="25.0" layoutY="145.0" prefHeight="32.0" prefWidth="156.0" promptText="kwota celu">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Label layoutX="213.0" layoutY="124.0" text="Wynik pracownika">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font></Label>
+      <TextField fx:id="wartoscField" layoutX="205.0" layoutY="145.0" prefHeight="32.0" prefWidth="156.0" promptText="wartość">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Label fx:id="myLabel" layoutX="9.0" layoutY="180.0" prefHeight="21.0" prefWidth="375.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="addButton" layoutX="82.0" layoutY="223.0" mnemonicParsing="false" onAction="#addCel" prefHeight="40.0" prefWidth="100.0" styleClass="success" stylesheets="@../Css/bootstrap3.css" text="Dodaj" />
+      <Button fx:id="backButton" layoutX="203.0" layoutY="223.0" mnemonicParsing="false" onAction="#backButton" prefHeight="40.0" prefWidth="100.0" styleClass="danger" stylesheets="@../Css/bootstrap2.css" text="Cofnij" />
+      <Separator layoutX="-1.0" layoutY="207.0" prefHeight="0.0" prefWidth="393.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" stylesheets="@../Css/test.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="component.Controller.Root">
+   <top>
+      <MenuBar fx:id="menuBar" minHeight="28.0" prefHeight="36.0" prefWidth="774.0" style="-fx-background-color: #8FBC8F;" styleClass="menu-item" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="pracownikMenu" mnemonicParsing="false" text="Pracownik">
+            <items>
+              <MenuItem fx:id="addPracownik" mnemonicParsing="false" onAction="#addPracownik" text="Dodaj" />
+                  <MenuItem fx:id="delPracownik" mnemonicParsing="false" onAction="#delPracownik" text="Usuń" />
+                  <MenuItem fx:id="showPracownik" mnemonicParsing="false" onAction="#showPracownik" text="Wyświetl" />
+                  <MenuItem fx:id="updatePracownik" mnemonicParsing="false" onAction="#updatePacownik" text="Aktualizuj" />
+            </items>
+               <accelerator>
+                  <KeyCodeCombination alt="DOWN" code="ASTERISK" control="UP" meta="UP" shift="UP" shortcut="UP" />
+               </accelerator>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/network.png" />
+                     </image>
+                     <effect>
+                        <InnerShadow color="#1c1459" />
+                     </effect>
+                  </ImageView>
+               </graphic>
+          </Menu>
+            <Menu fx:id="celMenu" mnemonicParsing="false" text="Cel">
+               <items>
+                  <MenuItem fx:id="addCel" mnemonicParsing="false" onAction="#addCel" text="Dodaj" />
+                  <MenuItem fx:id="delCel" mnemonicParsing="false" onAction="#delCel" text="Usuń" />
+                  <MenuItem fx:id="updateCel" mnemonicParsing="false" onAction="#updateCel" text="Aktualizuj" />
+               </items>
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/accounting.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+            <Menu fx:id="produktMenu" mnemonicParsing="false" text="Produkt">
+               <items>
+                  <MenuItem fx:id="addProdukt" mnemonicParsing="false" onAction="#addProdukt" text="Dodaj" />
+                  <MenuItem fx:id="delProdukt" mnemonicParsing="false" onAction="#delProdukt" text="Usuń" />
+                  <MenuItem fx:id="showProdukt" mnemonicParsing="false" onAction="#showProdukt" text="Wyświetl" />
+                  <MenuItem fx:id="updateProdukt" mnemonicParsing="false" onAction="#updateProdukt" text="Aktualizuj" />
+               </items>
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/shopping-bags.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <right>
+      <VBox style="-fx-background-color: #8FBC8F; -fx-border-color: #d0d0d0;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="25.0" prefWidth="131.0" text="kwartał" textFill="#0d1638">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="choiceKwartal" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#choiceKwartalKeyPressed" prefHeight="25.0" prefWidth="143.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" right="10.0" />
+               </VBox.margin></ChoiceBox>
+            <Label layoutX="10.0" layoutY="85.0" prefHeight="25.0" prefWidth="126.0" text="miesiąc" textFill="#0d1638">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="choiceMiesiac" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#choiceMiesiacKeyPressed" prefHeight="25.0" prefWidth="143.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" right="10.0" />
+               </VBox.margin></ChoiceBox>
+            <Separator prefHeight="25.0" prefWidth="150.0" />
+            <Label prefHeight="25.0" prefWidth="141.0" text="produkt" textFill="#0d1638">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="choiceProdukt" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#choiceProduktKeyPressed" prefHeight="25.0" prefWidth="143.0">
+               <VBox.margin>
+                  <Insets bottom="5.0" right="10.0" />
+               </VBox.margin></ChoiceBox>
+            <Separator prefHeight="25.0" prefWidth="150.0" />
+            <Label layoutX="13.0" layoutY="124.0" prefHeight="25.0" prefWidth="141.0" text="pracownik" textFill="#0d1638">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="choicePracownik" layoutX="13.0" layoutY="149.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyPressed="#choicePracownikKeyPressed" prefHeight="25.0" prefWidth="143.0" />
+            <Separator layoutX="13.0" layoutY="201.0" prefHeight="25.0" prefWidth="150.0" />
+            <Button fx:id="searchButton" mnemonicParsing="false" onAction="#searchButton" onMouseEntered="#searchButtonMouseEntered" onMouseExited="#searchButtonMouseExited" prefHeight="29.0" prefWidth="110.0" style="-fx-background-color: #8FBC8F;" textFill="#f50000">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="18.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <graphic>
+                  <ImageView fx:id="searchView" fitHeight="75.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/search.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="saldoLabel" text="Saldo: " textFill="#0d1638">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="2.0" />
+         </padding>
+      </VBox>
+   </right>
+   <bottom>
+      <ToolBar style="-fx-background-color: #8FBC8F;" BorderPane.alignment="CENTER">
+        <items>
+            <Button fx:id="backButton" mnemonicParsing="false" onAction="#backButton" onMouseEntered="#backButtonMouseEntered" onMouseExited="#backButtonMouseExited" style="-fx-background-color: #8FBC8F;" styleClass="first">
+               <graphic>
+                  <ImageView fx:id="imageBack" fitHeight="51.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#refreshButton" onMouseEntered="#refreshButtonMouseEntered" onMouseExited="#refreshButtonMouseExited" prefHeight="57.0" prefWidth="73.0" style="-fx-background-color: #8FBC8F;" textFill="RED">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imageRefresh" fitHeight="50.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/refresh-page-option.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Button fx:id="wykresButton" mnemonicParsing="false" onAction="#wykresButton" onMouseEntered="#wykresButtonMouseEntered" onMouseExited="#wykresButtonMouseExited" prefHeight="52.0" prefWidth="45.0" style="-fx-background-color: #8FBC8F;" textFill="RED">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="imageWykres" fitHeight="53.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/bar-chart.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <FlowPane orientation="VERTICAL" prefHeight="16.0" prefWidth="0.0" rowValignment="TOP">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </FlowPane>
+            <Text fx:id="text" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="RIGHT" visible="false" wrappingWidth="934.13671875">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Text>
+        </items>
+      </ToolBar>
+   </bottom>
+   <center>
+      <SplitPane dividerPositions="0.5" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane style="-fx-background-color: C0C0C0;">
+               <children>
+                  <TableView fx:id="tableCelPracownik" layoutX="2.0" layoutY="34.0">
+                     <columns>
+                        <TableColumn fx:id="nrColumn" maxWidth="200.0" minWidth="-1.0" prefWidth="30.0" text="Nr" />
+                        <TableColumn fx:id="pracownikColumn" minWidth="-1.0" prefWidth="125.0" text="Pracownik" />
+                        <TableColumn fx:id="produktColumn" minWidth="0.0" text="Produkt" />
+                        <TableColumn fx:id="miesiacColumn" prefWidth="70.0" text="Miesiąc" />
+                        <TableColumn fx:id="celColumn" text="Cel" />
+                        <TableColumn fx:id="wynikColumn" prefWidth="100.0" text="Wynik" />
+                        <TableColumn fx:id="saldoColumn" minWidth="-1.0" resizable="false" style="-fx-selection-bar: green;" text="Saldo" />
+                     </columns>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </TableView>
+                  <Label prefHeight="39.0" prefWidth="159.0" text="Cele pracownika">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane style="-fx-background-color: C0C0C0;">
+               <children>
+                  <TableView fx:id="tableCelOddzial" layoutX="3.0" layoutY="34.0">
+                    <columns>
+                      <TableColumn fx:id="produktCelColumn" prefWidth="106.0" text="Produkt" />
+                        <TableColumn fx:id="miesiacCelColumn" prefWidth="93.0" text="Miesiąc" />
+                      <TableColumn fx:id="celOddzialColumn" prefWidth="85.0" text="Cel" />
+                        <TableColumn fx:id="wynikOddzialColumn" prefWidth="90.0" text="Wynik" />
+                        <TableColumn fx:id="saldoOddzialColumn" prefWidth="75.0" text="Saldo" />
+                    </columns>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </TableView>
+                  <Label prefHeight="39.0" prefWidth="159.0" text="Cele oddziału">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

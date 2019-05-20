@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="243.0" prefWidth="308.0" styleClass="anchor-pane" stylesheets="@../Css/test.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="component.Controller.add.addProdukt">
+   <children>
+      <TextField fx:id="nazwaField" layoutX="52.0" layoutY="85.0" prefHeight="34.0" prefWidth="182.0" promptText="podaj nazwę">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <Label layoutX="54.0" layoutY="56.0" text="Nazwa produktu">
+         <font>
+            <Font name="System Italic" size="15.0" />
+         </font></Label>
+      <Button fx:id="addButton" layoutX="32.0" layoutY="201.0" mnemonicParsing="false" onAction="#addProdukt" prefHeight="34.0" prefWidth="96.0" styleClass="success" stylesheets="@../Css/bootstrap3.css" text="Dodaj" />
+      <Label fx:id="status" layoutX="6.0" layoutY="154.0" prefHeight="25.0" prefWidth="290.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Button fx:id="backButton" layoutX="155.0" layoutY="201.0" mnemonicParsing="false" onAction="#backButton" prefHeight="34.0" prefWidth="96.0" styleClass="danger" stylesheets="@../Css/bootstrap2.css" text="Cofnij" />
+      <Separator layoutY="184.0" prefHeight="4.0" prefWidth="308.0" />
+   </children>
+</AnchorPane>

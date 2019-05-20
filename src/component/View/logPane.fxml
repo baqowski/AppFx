@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="242.0" prefWidth="306.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="component.Controller.Login">
+   <bottom>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #8FBC8F;" BorderPane.alignment="CENTER">
+        <buttons>
+            <ImageView fx:id="loginView" fitHeight="53.0" fitWidth="301.0" onMouseClicked="#loginViewClicked" onMouseEntered="#loginMouseEntered" onMouseExited="#loginMouseExited" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/login-square-arrow-button-outline.png" />
+               </image>
+            </ImageView>
+        </buttons>
+      </ButtonBar>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #d0d0d0;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="loginField" layoutX="60.0" layoutY="46.0" promptText="Login">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="pswdField" layoutX="60.0" layoutY="104.0" promptText="Hasło">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="label" layoutX="16.0" layoutY="150.0" prefHeight="21.0" prefWidth="282.0" textFill="#c60b0b">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
